@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#F2D6F5">
+
+   <RelativeLayout
+       android:id="@+id/relativeLayout"
+       android:layout_width="match_parent"
+       android:layout_height="360dp"
+       android:background="@drawable/bg_converter"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent">
+
+   </RelativeLayout>
+
+   <TextView
+          android:id="@+id/textView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="10dp"
+          android:text="Currency Converter"
+          android:textAlignment="center"
+          android:textColor="@color/white"
+          android:textSize="35sp"
+          android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+   <TextView
+       android:id="@+id/textView2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="13dp"
+       android:text="From"
+       android:textColor="@color/white"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+   <TextView
+       android:id="@+id/textView3"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="To"
+       android:textColor="@color/black"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/textView"
+       android:layout_marginEnd="13dp"/>
+
+   <ImageView
+       android:id="@+id/imageView"
+       android:layout_width="40dp"
+       android:layout_height="40dp"
+       app:layout_constraintEnd_toStartOf="@id/textView3"
+       app:layout_constraintStart_toEndOf="@id/textView2"
+       app:layout_constraintTop_toBottomOf="@id/textView"
+       android:src="@drawable/updown" />
+   <Spinner
+       android:id="@+id/spinner_countries"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_margin="10dp"
+       app:layout_constraintBottom_toTopOf="@+id/textView4"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/textView2" />
+
+   <Spinner
+       android:id="@+id/spinner_countries_to"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_margin="10dp"
+       app:layout_constraintBottom_toTopOf="@+id/textView4"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/textView3" />
+
+   <TextView
+       android:id="@+id/textView4"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_margin="10dp"
+       android:text="Enter An Amount :"
+       android:textColor="@color/white"
+       android:textSize="15sp"
+      android:textStyle="bold"
+       app:layout_constraintBottom_toTopOf="@+id/amount_edit_text"
+       app:layout_constraintStart_toStartOf="parent" />
+
+
+<EditText
+    android:id="@+id/amount_edit_text"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_margin="10dp"
+    android:backgroundTint="@color/white"
+    android:hint="00.00"
+    android:textColor="#F8E8ED"
+    android:textSize="50sp"
+    android:textColorHint="@color/white"
+    android:letterSpacing=".1" />
+
+   <TextView
+       android:id="@+id/textView55"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_margin="10dp"
+       android:text="Converted Amount :"
+       android:textColor="#660456"
+       android:textSize="15sp"
+       android:textStyle="bold"
+       app:layout_constraintBottom_toTopOf="@+id/converted_amount"
+       app:layout_constraintStart_toStartOf="parent" />
+
+   <TextView
+      android:id="@+id/converted_amount"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+      android:text="0.000"
+       android:textColor="#8C0F6B"
+      android:textStyle="bold"
+      android:textSize="50sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/relativeLayout"
+      android:letterSpacing=".2"/>
+
+   <Button
+       android:id="@+id/converter_btn"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Converter"
+      android:backgroundTint="#EC03068A"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:layout_margin="10dp"
+       android:padding="15dp"
+       />
+
+   <Button
+       android:id="@+id/refresh_btn"
+       android:layout_width="80dp"
+       android:layout_height="wrap_content"
+       android:layout_marginBottom="216dp"
+       android:backgroundTint="#FFA500"
+       android:textStyle="italic"
+       android:padding="15dp"
+       android:text="Refresh"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.921"
+       app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
